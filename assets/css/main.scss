@@ -1,0 +1,140 @@
+* {
+  // color: #000;
+  //font-size: 14px;
+}
+
+.v-app-bar {
+  background-color: #fff !important;
+}
+
+.v-main {
+  background-color: #f0f1f1;
+}
+
+.fs-13 {
+  font-size: 13px !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fw-100 {
+  font-weight: 100 !important;
+}
+
+.fw-200 {
+  font-weight: 200 !important;
+}
+
+.fw-300 {
+  font-weight: 300 !important;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
+}
+
+.fw-900 {
+  font-weight: 900 !important;
+}
+
+.pl-14 {
+  padding-left: 56px;
+}
+
+.pl-15 {
+  padding-left: 60px;
+}
+
+.pl-16 {
+  padding-left: 64px;
+}
+
+.pl-17 {
+  padding-left: 68px;
+}
+
+.pl-18 {
+  padding-left: 72px;
+}
+
+.pl-19 {
+  padding-left: 76px;
+}
+
+.pl-20 {
+  padding-left: 80px;
+}
+
+.card-title {
+  padding: 8px 16px !important;
+}
+
+.input-group {
+  .input-group-label {
+    .required {
+      color: red;
+    }
+  }
+}
+
+.v-input {
+  .v-input__control {
+    .v-input__slot {
+      min-height: 35px !important;
+      padding: 0 1px !important;
+      fieldset {
+        border: 1px solid #e0e0e0 !important;
+      }
+      .v-text-field__slot {
+        input {
+          padding: 8px;
+          border-radius: 3px;
+          font-size: 14px;
+        }
+      }
+      .v-select__slot {
+        input {
+          padding: 8px;
+          font-size: 14px;
+        }
+      }
+    }
+    .v-text-field__details {
+      padding: 0 !important;
+    }
+  }
+
+  &.v-input--is-focused {
+    .v-input__slot {
+      fieldset {
+        border: 1px solid #7e7e7e !important;
+      }
+    }
+  }
+
+  &.error--text {
+    .v-input__slot {
+      fieldset {
+        border: 1px solid #ff5252 !important;
+      }
+    }
+  }
+}
