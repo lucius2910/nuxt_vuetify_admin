@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": ["@nuxtjs"],
+  "rules": {
+    "vue/multi-word-component-names": 0
+  }
+}

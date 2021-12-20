@@ -10,60 +10,56 @@
       app
     >
       <v-list class="pa-0" nav>
-        <template v-for="item in items">
-          <!-- if it's a menu item with no children -->
-          <v-list-item
-            v-if="!item.subItems"
-            class="ma-0"
-            :prepend-icon="item.icon"
-            :key="item.title"
-            :to="item.path"
-          >
-            <v-list-item-icon>
-              <v-icon v-text="item.icon"></v-icon>
-            </v-list-item-icon>
-            <v-list-item-title
-              class="fw-400 fs-14"
-              v-text="item.title"
-            ></v-list-item-title>
-          </v-list-item>
-
-          <!-- else if it has children -->
-          <v-list-group
-            v-if="item.subItems"
-            class="ma-0"
-            :key="item.title"
-            :prepend-icon="item.icon"
-            :append-icon="item.subItems ? 'mdi-chevron-down' : null"
-            no-action
-          >
-            <template v-slot:activator class="ma-0" :to="item.path">
-              <v-list-item-content class="ma-0">
-                <v-list-item-title
-                  class="fw-400 fs-14"
-                  v-text="item.title"
-                ></v-list-item-title>
-              </v-list-item-content>
-            </template>
-
+        <template v-for="(item, index) in items">
+          <div :key="index">
+            <!-- if it's a menu item with no children -->
             <v-list-item
-              v-for="child in item.subItems"
-              :key="child.title"
-              :to="child.path"
-              class="ma-0 pl-4"
-              link
+              v-if="!item.subItems"
+              :key="item.title"
+              class="ma-0"
+              :prepend-icon="item.icon"
+              :to="item.path"
             >
-              <v-list-item-icon class="child-icon">
-                <v-icon v-text="'mdi-circle-medium'"></v-icon>
+              <v-list-item-icon>
+                <v-icon v-text="item.icon" />
               </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title
-                  class="fw-400 fs-13"
-                  v-text="child.title"
-                ></v-list-item-title>
-              </v-list-item-content>
+              <v-list-item-title class="fw-400 fs-14" v-text="item.title" />
             </v-list-item>
-          </v-list-group>
+
+            <!-- else if it has children -->
+            <v-list-group
+              v-if="item.subItems"
+              :key="item.title"
+              class="ma-0"
+              :prepend-icon="item.icon"
+              :append-icon="item.subItems ? 'mdi-chevron-down' : null"
+              no-action
+            >
+              <template #activator>
+                <v-list-item-content class="ma-0" :to="item.path">
+                  <v-list-item-title class="fw-400 fs-14" v-text="item.title" />
+                </v-list-item-content>
+              </template>
+
+              <v-list-item
+                v-for="child in item.subItems"
+                :key="child.title"
+                :to="child.path"
+                class="ma-0 pl-4"
+                link
+              >
+                <v-list-item-icon class="child-icon">
+                  <v-icon v-text="'mdi-circle-medium'" />
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title
+                    class="fw-400 fs-13"
+                    v-text="child.title"
+                  />
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-group>
+          </div>
         </template>
       </v-list>
     </v-navigation-drawer>
@@ -71,15 +67,15 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import menu from "common/menu";
+import { mapGetters } from 'vuex'
+import menu from 'common/menu'
 
 export default {
   computed: {
-    ...mapGetters("layout", ["miniSideBar", "isShowNav"]),
-    items() {
-      return menu;
-    },
-  },
-};
+    ...mapGetters('layout', ['miniSideBar', 'isShowNav']),
+    items () {
+      return menu
+    }
+  }
+}
 </script>

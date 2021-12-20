@@ -1,36 +1,36 @@
 export const state = {
-  loggedIn: false,
-};
+  loggedIn: false
+}
 
 export const getters = {
-  loggedIn(state) {
-    return state.loggedIn;
-  },
-};
+  loggedIn (state) {
+    return state.loggedIn
+  }
+}
 
 export const actions = {
-  login(context) {
+  login (context) {
     // change state
-    context.commit("changeAuth", true);
+    context.commit('changeAuth', true)
 
     // show layout
-    context.dispatch("layout/toggleLayout", true, { root: true });
+    context.dispatch('layout/toggleLayout', true, { root: true })
 
     // go to home page
-    this.$router.push("/");
+    this.$router.push('/')
   },
-  logout(context) {
-    context.commit("changeAuth", false);
+  logout (context) {
+    context.commit('changeAuth', false)
     // show layout
-    context.dispatch("layout/toggleLayout", false, { root: true });
+    context.dispatch('layout/toggleLayout', false, { root: true })
 
     // go to home page
-    this.$router.push("/login");
-  },
-};
+    this.$router.push('/login')
+  }
+}
 
 export const mutations = {
-  changeAuth(state, data) {
-    state.loggedIn = data;
-  },
-};
+  changeAuth (state, data) {
+    state.loggedIn = data
+  }
+}

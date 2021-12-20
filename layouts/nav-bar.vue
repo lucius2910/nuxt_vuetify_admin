@@ -1,15 +1,22 @@
 <template>
-  <v-app-bar fixed app dense tile flat v-model="isShowNav">
+  <v-app-bar
+    v-model="isShowNav"
+    fixed
+    app
+    dense
+    tile
+    flat
+  >
     <v-btn icon @click="toggleSideBar">
       <v-icon>mdi-{{ `chevron-${miniSideBar ? "right" : "left"}` }}</v-icon>
     </v-btn>
 
-    <v-spacer></v-spacer>
+    <v-spacer />
 
     <v-menu bottom offset-y transition="scroll-y-reverse-transition">
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn v-bind="attrs" v-on="on" tile class="user-menu">
-          <v-avatar color="primary" class="avartar mr-2"></v-avatar>
+      <template #activator="{ on, attrs }">
+        <v-btn v-bind="attrs" tile class="user-menu" v-on="on">
+          <v-avatar color="primary" class="avartar mr-2" />
           <span>Lưu Công Thìn</span>
         </v-btn>
       </template>
@@ -20,10 +27,10 @@
           @click="logout"
         >
           <v-list-item-icon>
-            <v-icon v-text="item.icon"></v-icon>
+            <v-icon v-text="item.icon" />
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title"></v-list-item-title>
+            <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -32,25 +39,25 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
-  computed: {
-    ...mapGetters("layout", ["miniSideBar", "isShowNav"]),
-  },
-  methods: {
-    ...mapActions("auth", ["logout"]),
-    ...mapActions("layout", ["toggleSideBar"]),
-  },
-  data() {
+  data () {
     return {
       items: [
         {
-          icon: "mdi-export",
-          title: "Logout",
-        },
-      ],
-    };
+          icon: 'mdi-export',
+          title: 'Logout'
+        }
+      ]
+    }
   },
-};
+  computed: {
+    ...mapGetters('layout', ['miniSideBar', 'isShowNav'])
+  },
+  methods: {
+    ...mapActions('auth', ['logout']),
+    ...mapActions('layout', ['toggleSideBar'])
+  }
+}
 </script>

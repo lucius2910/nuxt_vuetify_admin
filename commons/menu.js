@@ -1,35 +1,35 @@
 export default [
   {
-    icon: "mdi-home-variant-outline",
-    title: "Dashboard",
-    path: "/dashboard",
+    icon: 'mdi-home-variant-outline',
+    title: 'Dashboard',
+    path: '/dashboard'
   },
   {
-    icon: "mdi-account-cog-outline",
-    title: "Categories",
+    icon: 'mdi-account-cog-outline',
+    title: 'Categories',
     subItems: [
       {
-        title: "Users",
-        path: "/user",
+        title: 'Users',
+        path: '/user'
       },
       {
-        title: "Login",
-        path: "/login",
-      },
-    ],
+        title: 'Login',
+        path: '/login'
+      }
+    ]
   },
   {
-    icon: "mdi-cogs",
-    title: "Settings",
+    icon: 'mdi-cogs',
+    title: 'Settings',
     subItems: [
       {
-        title: "Roles",
-        path: "/role",
+        title: 'Roles',
+        path: '/role'
       },
       {
-        title: "Permission",
-        path: "/permission",
-      },
-    ],
-  },
-];
+        title: 'Permission',
+        path: '/permission'
+      }
+    ]
+  }
+]

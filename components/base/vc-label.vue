@@ -1,7 +1,7 @@
 <template>
   <label class="input-group-label">
-    <slot></slot>
-    &nbsp;<span class="required" v-show="required">*</span>
+    <slot />
+    &nbsp;<span v-show="required" class="required">*</span>
   </label>
 </template>
 <script>
@@ -9,8 +9,8 @@ export default {
   props: {
     required: {
       type: Boolean,
-      default: false,
-    },
-  },
-};
+      default: false
+    }
+  }
+}
 </script>

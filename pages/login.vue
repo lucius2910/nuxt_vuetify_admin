@@ -7,25 +7,27 @@
             <div class="input-group">
               <vc-label>User name</vc-label>
               <v-text-field
+                v-model="user_name"
                 outlined
                 dense
                 :rules="userNameRules"
-                v-model="user_name"
-              ></v-text-field>
+              />
             </div>
             <div class="input-group">
               <vc-label>Password</vc-label>
               <v-text-field
+                v-model="password"
                 outlined
                 dense
                 type="password"
                 :rules="passwordRules"
-                v-model="password"
-              ></v-text-field>
+              />
             </div>
           </v-card-text>
           <v-card-actions class="pa-4">
-            <v-btn color="primary" block @click="login">Login</v-btn>
+            <v-btn color="primary" block @click="login">
+              Login
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-form>
@@ -35,22 +37,22 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       user_name: null,
       password: null,
 
       valid: true,
-      userNameRules: [(v) => !!v || "Name is required"],
-      passwordRules: [(v) => !!v || "Name is required"],
-    };
+      userNameRules: [v => !!v || 'Name is required'],
+      passwordRules: [v => !!v || 'Name is required']
+    }
   },
   methods: {
-    login() {
+    login () {
       if (this.$refs.loginForm.validate()) {
-        this.$store.dispatch("auth/login");
+        this.$store.dispatch('auth/login')
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>

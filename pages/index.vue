@@ -1,15 +1,15 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col></v-col>
+    <v-col />
   </v-row>
 </template>
 
 <script>
 export default {
-  head() {
+  head () {
     return {
-      title: "Home",
-    };
-  },
-};
+      title: 'Home'
+    }
+  }
+}
 </script>
