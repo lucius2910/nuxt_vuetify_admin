@@ -5,12 +5,12 @@
   </label>
 </template>
 <script>
-export default {
-  props: {
-    required: {
-      type: Boolean,
-      default: false
-    }
+  export default {
+    props: {
+      required: {
+        type: Boolean,
+        default: false,
+      },
+    },
   }
-}
 </script>

@@ -1,14 +1,14 @@
 export default [
   {
     name: 'Nam',
-    id: 1
+    id: 1,
   },
   {
     name: 'Nữ',
-    id: 2
+    id: 2,
   },
   {
     name: 'Khác',
-    id: 0
-  }
+    id: 0,
+  },
 ]

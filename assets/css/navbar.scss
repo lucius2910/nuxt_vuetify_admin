@@ -1,14 +1,11 @@
-.v-app-bar {
-  .v-toolbar__content {
-    .user-menu {
-      height: 100% !important;
-      background: transparent !important;
-      box-shadow: unset !important;
-      .avartar {
-        height: 30px !important;
-        width: 30px !important;
-        min-width: 30px !important;
-      }
-    }
+.user-menu {
+  height: 100% !important;
+  background: transparent !important;
+  box-shadow: unset !important;
+
+  .avartar {
+    height: 30px !important;
+    width: 30px !important;
+    min-width: 30px !important;
   }
 }

@@ -25,9 +25,7 @@
             </div>
           </v-card-text>
           <v-card-actions class="pa-4">
-            <v-btn color="primary" block @click="login">
-              Login
-            </v-btn>
+            <v-btn color="primary" block @click="login"> Login </v-btn>
           </v-card-actions>
         </v-card>
       </v-form>
@@ -36,23 +34,23 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      user_name: null,
-      password: null,
+  export default {
+    data() {
+      return {
+        user_name: null,
+        password: null,
 
-      valid: true,
-      userNameRules: [v => !!v || 'Name is required'],
-      passwordRules: [v => !!v || 'Name is required']
-    }
-  },
-  methods: {
-    login () {
-      if (this.$refs.loginForm.validate()) {
-        this.$store.dispatch('auth/login')
+        valid: true,
+        userNameRules: [(v) => !!v || 'Name is required'],
+        passwordRules: [(v) => !!v || 'Name is required'],
       }
-    }
+    },
+    methods: {
+      login() {
+        if (this.$refs.loginForm.validate()) {
+          this.$store.dispatch('auth/login')
+        }
+      },
+    },
   }
-}
 </script>

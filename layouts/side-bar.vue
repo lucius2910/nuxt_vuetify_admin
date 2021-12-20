@@ -67,15 +67,15 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import menu from 'common/menu'
+  import { mapGetters } from 'vuex'
+  import menu from 'common/menu'
 
-export default {
-  computed: {
-    ...mapGetters('layout', ['miniSideBar', 'isShowNav']),
-    items () {
-      return menu
-    }
+  export default {
+    computed: {
+      ...mapGetters('layout', ['miniSideBar', 'isShowNav']),
+      items() {
+        return menu
+      },
+    },
   }
-}
 </script>

@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
-export default {
-  computed: {
-    ...mapGetters('toast', { items: 'getToast' })
-  },
-  methods: {
-    ...mapActions('toast', ['dissmisNotify'])
+  import { mapGetters, mapActions } from 'vuex'
+  export default {
+    computed: {
+      ...mapGetters('toast', { items: 'getToast' }),
+    },
+    methods: {
+      ...mapActions('toast', ['dissmisNotify']),
+    },
   }
-}
 </script>

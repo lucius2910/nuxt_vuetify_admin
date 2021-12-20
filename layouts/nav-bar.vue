@@ -1,14 +1,7 @@
 <template>
-  <v-app-bar
-    v-model="isShowNav"
-    fixed
-    app
-    dense
-    tile
-    flat
-  >
+  <v-app-bar v-model="isShowNav" fixed app dense tile flat>
     <v-btn icon @click="toggleSideBar">
-      <v-icon>mdi-{{ `chevron-${miniSideBar ? "right" : "left"}` }}</v-icon>
+      <v-icon>mdi-{{ `chevron-${miniSideBar ? 'right' : 'left'}` }}</v-icon>
     </v-btn>
 
     <v-spacer />
@@ -39,25 +32,25 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
 
-export default {
-  data () {
-    return {
-      items: [
-        {
-          icon: 'mdi-export',
-          title: 'Logout'
-        }
-      ]
-    }
-  },
-  computed: {
-    ...mapGetters('layout', ['miniSideBar', 'isShowNav'])
-  },
-  methods: {
-    ...mapActions('auth', ['logout']),
-    ...mapActions('layout', ['toggleSideBar'])
+  export default {
+    data() {
+      return {
+        items: [
+          {
+            icon: 'mdi-export',
+            title: 'Logout',
+          },
+        ],
+      }
+    },
+    computed: {
+      ...mapGetters('layout', ['miniSideBar', 'isShowNav']),
+    },
+    methods: {
+      ...mapActions('auth', ['logout']),
+      ...mapActions('layout', ['toggleSideBar']),
+    },
   }
-}
 </script>

@@ -1,34 +1,34 @@
 export const state = {
   miniSideBar: false,
-  isShowNav: true
+  isShowNav: true,
 }
 
 export const getters = {
-  miniSideBar (state) {
+  miniSideBar(state) {
     return state.miniSideBar
   },
 
-  isShowNav (state) {
+  isShowNav(state) {
     return state.isShowNav
-  }
+  },
 }
 
 export const actions = {
-  toggleSideBar (context) {
+  toggleSideBar(context) {
     context.commit('toggleSideBar')
   },
 
-  toggleLayout (context, isShow) {
+  toggleLayout(context, isShow) {
     context.commit('toggleLayout', isShow)
-  }
+  },
 }
 
 export const mutations = {
-  toggleSideBar (state) {
+  toggleSideBar(state) {
     state.miniSideBar = !state.miniSideBar
   },
 
-  toggleLayout (state, isShow) {
+  toggleLayout(state, isShow) {
     state.isShowNav = isShow
-  }
+  },
 }

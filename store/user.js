@@ -1,21 +1,21 @@
 export const state = {
-  data: {}
+  data: {},
 }
 
 export const getters = {
-  getUser (state) {
+  getUser(state) {
     return state.data
-  }
+  },
 }
 
 export const actions = {
-  setUser ({ commit }, user) {
+  setUser({ commit }, user) {
     commit('setUser', user)
-  }
+  },
 }
 
 export const mutations = {
-  setUser (state, user) {
+  setUser(state, user) {
     state.data = user
-  }
+  },
 }

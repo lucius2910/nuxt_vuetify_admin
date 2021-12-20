@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import SideBar from './side-bar.vue'
-import NavBar from './nav-bar.vue'
+  import SideBar from './side-bar.vue'
+  import NavBar from './nav-bar.vue'
 
-export default {
-  name: 'Default',
-  components: {
-    SideBar,
-    NavBar
+  export default {
+    name: 'Default',
+    components: {
+      SideBar,
+      NavBar,
+    },
   }
-}
 </script>

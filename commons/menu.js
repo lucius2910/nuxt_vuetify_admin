@@ -2,7 +2,7 @@ export default [
   {
     icon: 'mdi-home-variant-outline',
     title: 'Dashboard',
-    path: '/dashboard'
+    path: '/dashboard',
   },
   {
     icon: 'mdi-account-cog-outline',
@@ -10,13 +10,13 @@ export default [
     subItems: [
       {
         title: 'Users',
-        path: '/user'
+        path: '/user',
       },
       {
         title: 'Login',
-        path: '/login'
-      }
-    ]
+        path: '/login',
+      },
+    ],
   },
   {
     icon: 'mdi-cogs',
@@ -24,12 +24,12 @@ export default [
     subItems: [
       {
         title: 'Roles',
-        path: '/role'
+        path: '/role',
       },
       {
         title: 'Permission',
-        path: '/permission'
-      }
-    ]
-  }
+        path: '/permission',
+      },
+    ],
+  },
 ]

@@ -9,8 +9,8 @@ export default {
         error: '#FF5252',
         info: '#002C43',
         success: '#4CAF50',
-        warning: '#FFC107'
-      }
-    }
-  }
+        warning: '#FFC107',
+      },
+    },
+  },
 }

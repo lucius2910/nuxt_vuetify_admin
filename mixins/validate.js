@@ -9,11 +9,15 @@ const validate = {
       return value?.length >= min || `${name} phải lớn hơn ${min} ký tự`
     },
     maxLengthRule: (value, name, max) => {
-      if (!value) { return true }
+      if (!value) {
+        return true
+      }
       return value.length <= max || `${name} không được vượt quá ${max} ký tự`
     },
     emailRule: (value, name) => {
-      if (!value) { return true }
+      if (!value) {
+        return true
+      }
       return (
         /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
         `Vui lòng nhập đúng định dạng ${name}`
@@ -25,8 +29,8 @@ const validate = {
           value
         ) || `Vui lòng nhập đúng định dạng ${name}`
       )
-    }
-  }
+    },
+  },
 }
 Vue.mixin(validate)
 
