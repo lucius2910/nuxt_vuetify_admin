@@ -9,7 +9,7 @@
       fixed
       app
     >
-      <v-list class="pa-0" nav>
+      <v-list class="pa-0" nav dense>
         <template v-for="(item, index) in items">
           <div :key="index">
             <!-- if it's a menu item with no children -->
