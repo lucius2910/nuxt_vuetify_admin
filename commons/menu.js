@@ -5,30 +5,42 @@ export default [
     path: '/dashboard',
   },
   {
-    icon: 'mdi-account-cog-outline',
-    title: 'Categories',
-    subItems: [
-      {
-        title: 'Users',
-        path: '/user',
-      },
-      {
-        title: 'Login',
-        path: '/login',
-      },
-    ],
-  },
-  {
     icon: 'mdi-cogs',
     title: 'Settings',
     subItems: [
       {
         title: 'Roles',
-        path: '/role',
+        path: '/setting/role',
       },
       {
         title: 'Permission',
-        path: '/permission',
+        path: '/setting/permission',
+      },
+    ],
+  },
+  {
+    icon: 'mdi-account-cog-outline',
+    title: 'Sample',
+    subItems: [
+      {
+        title: 'Toast',
+        path: '/sample/toast',
+      },
+      {
+        title: 'Dropdown',
+        path: '/sample/dropdown',
+      },
+      {
+        title: 'Table',
+        path: '/sample/table',
+      },
+      {
+        title: 'Form',
+        path: '/sample/form',
+      },
+      {
+        title: 'Login',
+        path: '/login',
       },
     ],
   },
