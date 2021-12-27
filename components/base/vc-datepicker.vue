@@ -6,6 +6,7 @@
     offset-y
     max-width="290px"
     min-width="auto"
+    :nudge-top="25"
     :close-on-content-click="false"
   >
     <template #activator="{ on, attrs }">

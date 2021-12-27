@@ -5,6 +5,12 @@ const validate = {
     requiredRule: (value, name) => {
       return !!value || `Vui lòng nhập ${name}`
     },
+    numberRule: (value, name) => {
+      if (!value) {
+        return true
+      }
+      return /^\d+$/.test(value) || `Vui lòng nhập đúng định dạng ${name}`
+    },
     minLengthRule: (value, name, min) => {
       return value?.length >= min || `${name} phải lớn hơn ${min} ký tự`
     },

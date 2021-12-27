@@ -37,6 +37,6 @@ export const mutations = {
   },
 
   pop(state, item) {
-    if (state.items.find((obj) => obj.isShow)?.length > 0) state.items = []
+    if (state.items.find((obj) => obj.isShow)?.length <= 0) state.items = []
   },
 }
