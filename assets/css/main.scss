@@ -94,6 +94,7 @@
   .v-input__control {
     .v-input__slot {
       min-height: 35px !important;
+      height: 35px !important;
       padding: 0 1px !important;
 
       fieldset {
@@ -112,6 +113,12 @@
         input {
           padding: 8px;
           font-size: 14px;
+        }
+        .v-select__selections {
+          .v-select__selection {
+            padding: 8px;
+            font-size: 14px;
+          }
         }
       }
     }
