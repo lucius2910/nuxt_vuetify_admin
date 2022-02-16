@@ -10,8 +10,7 @@
                 v-model="user_name"
                 outlined
                 dense
-                :rules="userNameRules"
-              />
+                :rules="userNameRules" />
             </div>
             <div class="input-group">
               <vc-label>Password</vc-label>
@@ -20,8 +19,7 @@
                 outlined
                 dense
                 type="password"
-                :rules="passwordRules"
-              />
+                :rules="passwordRules" />
             </div>
           </v-card-text>
           <v-card-actions class="pa-4">

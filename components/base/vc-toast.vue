@@ -3,8 +3,7 @@
     <vc-alert
       v-for="(item, index) in items"
       :key="index"
-      :value="item"
-    ></vc-alert>
+      :value="item"></vc-alert>
   </div>
 </template>
 

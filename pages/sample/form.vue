@@ -14,8 +14,7 @@
                   outlined
                   dense
                   validate-on-blur
-                  :rules="[(v) => requiredRule(v, 'tên khách hàng')]"
-                />
+                  :rules="[(v) => requiredRule(v, 'tên khách hàng')]" />
               </div>
 
               <div class="input-group">
@@ -28,8 +27,7 @@
                   :rules="[
                     (v) => requiredRule(v, 'tuổi'),
                     (v) => numberRule(v, 'tuổi'),
-                  ]"
-                />
+                  ]" />
               </div>
 
               <div class="input-group">
@@ -39,8 +37,7 @@
                   :rules="[
                     (v) => requiredRule(v, 'ngày sinh'),
                     (v) => dateRule(v, 'ngày sinh'),
-                  ]"
-                />
+                  ]" />
               </div>
 
               <div class="input-group">
@@ -53,8 +50,7 @@
                   validate-on-blur
                   item-value="id"
                   item-text="name"
-                  :rules="[(v) => requiredRule(v, 'giới tính')]"
-                />
+                  :rules="[(v) => requiredRule(v, 'giới tính')]" />
               </div>
 
               <div class="input-group">
@@ -64,8 +60,7 @@
                   outlined
                   dense
                   validate-on-blur
-                  :rules="[(v) => requiredRule(v, 'địa chỉ')]"
-                />
+                  :rules="[(v) => requiredRule(v, 'địa chỉ')]" />
               </div>
             </v-card-text>
           </v-card>

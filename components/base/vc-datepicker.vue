@@ -7,8 +7,7 @@
     max-width="290px"
     min-width="auto"
     :nudge-top="25"
-    :close-on-content-click="false"
-  >
+    :close-on-content-click="false">
     <template #activator="{ on, attrs }">
       <v-text-field
         v-model="dateFormatted"
@@ -18,15 +17,13 @@
         v-bind="attrs"
         :placeholder="placeholder"
         :rules="rules"
-        v-on="on"
-      />
+        v-on="on" />
     </template>
     <v-date-picker
       v-model="date"
       scrollable
       no-title
-      @input="isShowPicker = false"
-    />
+      @input="isShowPicker = false" />
   </v-menu>
 </template>
 

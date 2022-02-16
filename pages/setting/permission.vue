@@ -10,9 +10,9 @@
 
 <script>
   export default {
-    computed: {},
     data() {
       return {}
     },
+    computed: {},
   }
 </script>

@@ -84,6 +84,8 @@
 
 .input-group {
   .input-group-label {
+    color: #333;
+
     .required {
       color: red;
     }
@@ -114,6 +116,7 @@
           padding: 8px;
           font-size: 14px;
         }
+
         .v-select__selections {
           .v-select__selection {
             padding: 8px;

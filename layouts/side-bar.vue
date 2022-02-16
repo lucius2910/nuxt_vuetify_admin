@@ -7,8 +7,7 @@
       :value="isShowNav"
       :mini-variant="miniSideBar"
       fixed
-      app
-    >
+      app>
       <v-list class="pa-0" nav dense>
         <template v-for="(item, index) in items">
           <div :key="index">
@@ -18,8 +17,7 @@
               :key="item.title"
               class="ma-0"
               :prepend-icon="item.icon"
-              :to="item.path"
-            >
+              :to="item.path">
               <v-list-item-icon>
                 <v-icon v-text="item.icon" />
               </v-list-item-icon>
@@ -33,8 +31,7 @@
               class="ma-0"
               :prepend-icon="item.icon"
               :append-icon="item.subItems ? 'mdi-chevron-down' : null"
-              no-action
-            >
+              no-action>
               <template #activator>
                 <v-list-item-content class="ma-0" :to="item.path">
                   <v-list-item-title class="fw-400 fs-14" v-text="item.title" />
@@ -46,16 +43,14 @@
                 :key="child.title"
                 :to="child.path"
                 class="ma-0 pl-4"
-                link
-              >
+                link>
                 <v-list-item-icon class="child-icon">
                   <v-icon v-text="'mdi-circle-medium'" />
                 </v-list-item-icon>
                 <v-list-item-content>
                   <v-list-item-title
                     class="fw-400 fs-13"
-                    v-text="child.title"
-                  />
+                    v-text="child.title" />
                 </v-list-item-content>
               </v-list-item>
             </v-list-group>

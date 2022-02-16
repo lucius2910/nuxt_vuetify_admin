@@ -16,8 +16,7 @@
               item-text="name"
               :menu-props="{ 'nudge-top': -35 }"
               :items="genders"
-              :rules="[(v) => requiredRule(v, 'giới tính')]"
-            />
+              :rules="[(v) => requiredRule(v, 'giới tính')]" />
           </div>
 
           <div class="input-group">
@@ -30,8 +29,7 @@
               item-value="id"
               item-text="name"
               :items="genders"
-              :rules="[(v) => requiredRule(v, 'giới tính')]"
-            />
+              :rules="[(v) => requiredRule(v, 'giới tính')]" />
           </div>
 
           <div class="input-group">
@@ -44,8 +42,7 @@
               item-value="id"
               item-text="name"
               :items="genders"
-              :rules="[(v) => requiredRule(v, 'giới tính')]"
-            />
+              :rules="[(v) => requiredRule(v, 'giới tính')]" />
           </div>
         </v-card-text>
       </v-card>

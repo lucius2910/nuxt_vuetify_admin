@@ -1,16 +1,15 @@
 <template>
   <div>
     <v-alert
+      v-show="item.isShow"
       :type="item.type"
       :icon="false"
-      v-show="item.isShow"
       dismissible
       colored-border
       border="left"
       transition="slide-x-reverse-transition"
       width="300"
-      class="pa-2 pl-5 pr-3 mb-2 fs-13"
-    >
+      class="pa-2 pl-5 pr-3 mb-2 fs-13">
       {{ item.content }}
     </v-alert>
   </div>
